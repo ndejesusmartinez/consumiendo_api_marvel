@@ -1,0 +1,13 @@
+.titulo{
+  text-align: center;
+  margin-top: 1rem;
+}
+button{
+  text-align: center;
+  margin-left: 1rem;
+}
+.botones{
+  width: 50vw;
+  margin: 0 auto;
+  text-align: center;
+}
