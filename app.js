@@ -23,7 +23,7 @@ fetch(url)
   const HTMLResponse = document.querySelector("#resultado");
   const tpl = items.map((items)=> `<div class="col-md-2"> <h3>${items.name}</h3>
                                    <a href="${items.urls[1].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.name}" class="img-thumbnail"><br> </a> <br>
-                                   
+
 
 
   </div>`);
@@ -39,8 +39,7 @@ function obtenerComics(){
     let items=json.data.results;
     console.log(items)
     const HTMLResponse = document.querySelector("#resultado");
-    const tpl = items.map((items)=> ` <div class="col-md-3"> <h3>ID: ${items.id}</h3>
-                                         Name: ${items.title}<br>
+    const tpl = items.map((items)=> ` <div class="col-md-3"> <h3>${items.title}</h3>
                                          <a href="${items.urls[0].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.title}"class="img-thumbnail"></a>
     </div>`);
     HTMLResponse.innerHTML = tpl;
@@ -55,8 +54,7 @@ function obtenerSeries(){
     let items=json.data.results;
     console.log(items)
     const HTMLResponse = document.querySelector("#resultado");
-    const tpl = items.map((items)=> `<div class="col-md-3"> <h3>ID: ${items.id}</h3>
-                                         Name: ${items.title}<br>
+    const tpl = items.map((items)=> `<div class="col-md-3"> <h3>${items.title}</h3
                                          <a href="${items.urls[0].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.title}"class="img-thumbnail"></a>
     </div>`);
     HTMLResponse.innerHTML = tpl;
