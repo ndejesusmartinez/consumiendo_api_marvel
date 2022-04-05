@@ -17,11 +17,16 @@ fetch(url)
 .then((json)=>{
   let items = json.data.results;
   console.log(items)
-  const HTMLResponse = document.querySelector(".resultado");
-  const tpl = items.map((items)=> ` <h3>ID: ${items.id}</h3>
-                                       Name: ${items.name}<br>
-                                       <a href="${items.urls[0].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.name}"><br> </a>
-  `);
+  let ts = '1'
+  let apikey = '1b4a71597fe79145195683ef11f4635b'
+  let hash = '55f6472b12db4ff84b98cf97e899c1a0'
+  const HTMLResponse = document.querySelector("#resultado");
+  const tpl = items.map((items)=> `<div class="col-md-2"> <h3>${items.name}</h3>
+                                   <a href="${items.urls[1].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.name}" class="img-thumbnail"><br> </a> <br>
+                                   
+
+
+  </div>`);
   HTMLResponse.innerHTML = tpl;
 })
 };
@@ -33,11 +38,11 @@ function obtenerComics(){
   .then((json)=>{
     let items=json.data.results;
     console.log(items)
-    const HTMLResponse = document.querySelector(".resultado");
-    const tpl = items.map((items)=> ` <h3>ID: ${items.id}</h3>
+    const HTMLResponse = document.querySelector("#resultado");
+    const tpl = items.map((items)=> ` <div class="col-md-3"> <h3>ID: ${items.id}</h3>
                                          Name: ${items.title}<br>
-                                         <a href="${items.urls[0].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.title}"></a>
-    `);
+                                         <a href="${items.urls[0].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.title}"class="img-thumbnail"></a>
+    </div>`);
     HTMLResponse.innerHTML = tpl;
   })
 };
@@ -49,11 +54,11 @@ function obtenerSeries(){
   .then((json)=>{
     let items=json.data.results;
     console.log(items)
-    const HTMLResponse = document.querySelector(".resultado");
-    const tpl = items.map((items)=> ` <h3>ID: ${items.id}</h3>
+    const HTMLResponse = document.querySelector("#resultado");
+    const tpl = items.map((items)=> `<div class="col-md-3"> <h3>ID: ${items.id}</h3>
                                          Name: ${items.title}<br>
-                                         <a href="${items.urls[0].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.title}"></a>
-    `);
+                                         <a href="${items.urls[0].url}"> <img src="${items.thumbnail.path}.${items.thumbnail.extension}" alt="${items.title}"class="img-thumbnail"></a>
+    </div>`);
     HTMLResponse.innerHTML = tpl;
   })
 };
