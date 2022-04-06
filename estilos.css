@@ -19,3 +19,16 @@ button{
     justify-content: center;
   }
 }
+
+.resultado{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 1rem;
+}
+
+@media screen and (max-width: 858px){
+  .resultado{
+    display: block;
+  }
+}
