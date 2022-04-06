@@ -11,7 +11,7 @@ document.querySelector('#Listar_series').addEventListener('click',function(){
 });
 
 async function obtenerHeroes(){
-const respuesta = await fetch(`https://gateway.marvel.com:443/v1/public/characters?limit=20&ts=1&apikey=1b4a71597fe79145195683ef11f4635b&hash=55f6472b12db4ff84b98cf97e899c1a0`);
+const respuesta = await fetch(`https://gateway.marvel.com:443/v1/public/characters?limit=100&ts=1&apikey=1b4a71597fe79145195683ef11f4635b&hash=55f6472b12db4ff84b98cf97e899c1a0`);
 //console.log(respuesta)
 
 const datos = await respuesta.json();
