@@ -22,6 +22,16 @@ button{
     margin-bottom: 1rem;
   }
 }
+.formulario{
+  margin-top: 1rem;
+}
+form{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
 
 .resultado{
   display: grid;
@@ -35,4 +45,7 @@ button{
   .resultado{
     display: block;
   }
+}
+.footer p {
+  text-align: center;
 }

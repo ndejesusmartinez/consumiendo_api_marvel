@@ -6,12 +6,20 @@
     <link rel="stylesheet" href="estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Consumiendo API de Marvel</title>
-    <h2 class="titulo">Consumiendo recursos de la API  de Marvel</h2>
+    <h2 class="titulo"> <a href="./">Consumiendo recursos de la API  de Marvel</a> </h2>
   </head>
   <div class="botones">
-    <button class="btn btn-primary" id="Listar_heroes"type="button" name="button">Listar Heroes</button>
-    <button class="btn btn-primary" id="Listar_comics"type="button" name="button">Listar comics</button>
-    <button class="btn btn-primary" id="Listar_series"type="button" name="button">Listar series</button>
+    <button class="btn btn-primary" id="Listar_heroes"type="button" name="button">Heroes</button>
+    <button class="btn btn-primary" id="Listar_comics"type="button" name="button">Comics</button>
+    <button class="btn btn-primary" id="Listar_series"type="button" name="button">Series</button>
+  </div>
+  <div class="container">
+    <div class="formulario">
+      <form class="" action="personaje.html?nombre=" method="get">
+        <input type="text" name="nombre" value="">
+          <button class="btn btn-primary" type="submit" name="button">Buscar</button>
+      </form>
+   </div>
   </div>
   <body>
     <div class="container">
@@ -20,5 +28,10 @@
     </div>
   </body>
   <script type="text/javascript" src="app.js"></script>
-
+  <footer>
+    <div class="footer">
+      <p>Attribution: <a href=\"http://marvel.com\">Data provided by Marvel. © 2022 MARVEL</a></p>
+      <p>Copyright: © 2022 MARVEL</p>
+    </div>
+  </footer>
 </html>
