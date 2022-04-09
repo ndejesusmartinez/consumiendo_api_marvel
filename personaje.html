@@ -27,6 +27,30 @@
 
       </div>
     </div>
+    <script type="text/javascript">
+    function buscarPersonajes(){
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var nombre_personaje = urlParams.get('nombre');
+    let url=`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${nombre_personaje}&limit=100&ts=1&apikey=1b4a71597fe79145195683ef11f4635b&hash=55f6472b12db4ff84b98cf97e899c1a0`;
+    async function naren(){
+    const respuesta = await fetch(`${url}`);
+    console.log(respuesta)
+    const datos = await respuesta.json();
+    let personajes = datos.data.results;
+    console.log(personajes);
+    let heroes='';
+    personajes.forEach(persona=>{
+    heroes+= `<div class="resultss"><h3>${persona.name}</h3>
+                                    <img src="${persona.thumbnail.path}.${persona.thumbnail.extension}" class="img-thumbnail">
+      </div>`
+    })
+
+    document.getElementById('resultado').innerHTML=heroes;
+    };
+    naren();
+    };
+    </script>
   </body>
   <footer>
     <div class="footer">
